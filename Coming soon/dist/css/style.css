@@ -1,0 +1,2128 @@
+/*************************************************************************************************************
+
+1.  FRAMEWORK
+    1.1. Framework - Left
+    1.2. Framework - Right
+    1.3. Framework - Center
+2.  LOGO
+3.  TEXT LOADING ANIMATION
+4.  HOMEPAGE BUTTONS
+    4.1. Homepage Buttons Animations
+    4.2. Homepage Scroll Animation
+5.  ABOUT SECTION
+    5.1. Portfolio
+    5.2. Portfolio Effect
+    5.3. Portfolio Responsive
+    5.4. Lightbox
+6.  CONTACT SECTION
+    6.1. Contact Section - Textarea & Input & Label Styles
+    6.2. Contact-Section - Send Button Style
+    6.3. Contact-Section - Error & Valid Styles
+7.  COUNTDOWN
+8.  YOUTUBE PLAYER BUTTONS (Only works with youtube background version)
+9.  MAP
+10. SUBSCIPTION
+    10.1. Subscribe Button
+    10.2. Modal
+    10.3. Modal Close Animation
+11. LOADING ANIMATION  
+12. BACK TO TOP BUTTON
+13. SOCIAL MEDIA BUTTONS
+14. LAYOUT TYPES
+15. OVERLAY TYPES
+    15.1. Dotted
+    15.2. Gradient
+16. COLOR TYPES
+    16.1. Purple
+    16.2. Red
+    16.3. Green
+    16.4. Blue
+    16.5. Magentamix
+    16.6. Orange
+    16.7. Dark
+    16.8. White
+17. MEDIA QUERIES (RESPONSIVE)
+    17.1. Max - Width 1024px
+    17.2. Max - Width 527px
+    
+*************************************************************************************************************/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+p,
+h1,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    color: #000000;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/* Slick Buttons */
+.slick-next,
+.slick-prev {
+    display: none !important;
+}
+
+/* Form Reset */
+.btn,
+button,
+input,
+textarea,
+:focus {
+    outline: none;
+    box-shadow: none !important;
+}
+
+/*************************************************************************************************************
+1. FRAMEWORK
+*************************************************************************************************************/
+
+#left,
+#right,
+#center {
+    position: fixed;
+}
+
+/************************************************
+1.1. Framework - Left
+*/
+
+#left {
+    height: 100%;
+    width: calc(50% - 70px);
+    padding: 20px;
+}
+
+.outer {
+    display: table;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/************************************************
+1.2. Framework - Right
+*/
+
+#right {
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    background: #ecf0f1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#right h1.first {
+    font-weight: 900;
+    margin-top: -30px;
+}
+
+#right h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    background: #fff;
+    background: -moz-linear-gradient(top, #ecf0f1 0, #ecf0f1 0, #d7d9d9 0, #ecf0f1 86%, #ecf0f1 100%);
+    background: -webkit-linear-gradient(top, #ecf0f1 0, #ecf0f1 0, #d7d9d9 0, #ecf0f1 86%, #ecf0f1 100%);
+    background: linear-gradient(to bottom, #ecf0f1 0, #ecf0f1 0, #d7d9d9 0, #ecf0f1 86%, #ecf0f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@white', endColorstr='@white', GradientType=0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 20px;
+    clear: both;
+}
+
+#right section {
+    padding: 60px 35px;
+    text-align: left;
+}
+
+#right section h1 {
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#right section p.description {
+    margin-top: 20px;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+/************************************************
+1.3. FRAMEWORK | Center
+*/
+
+#center {
+    height: 100%;
+    width: 70px;
+    right: 50%;
+    background: #4725b2;
+    background: -moz-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: -webkit-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: linear-gradient(to bottom, #4725b2 1%, #29224a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4725b2', endColorstr='#29224a', GradientType=0);
+    -webkit-box-shadow: 0px 3px 18px 7px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 0px 3px 18px 7px rgba(0, 0, 0, 0.32);
+    box-shadow: 0px 3px 18px 7px rgba(0, 0, 0, 0.32);
+}
+
+#center .rotate-text {
+    position: absolute;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    bottom: 0;
+    color: #ffffff;
+    height: 100%;
+}
+
+#center .rotate-text h1 {
+    line-height: 70px;
+}
+
+/*************************************************************************************************************
+2. LOGO
+*************************************************************************************************************/
+
+a.logo::before {
+    content: url("../img/logo-white.png")
+}
+
+a.logo {
+    width: 191px;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/*************************************************************************************************************
+3. TEXT LOADING ANIMATION
+*************************************************************************************************************/
+
+.headline {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.headline .animated-words {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+
+.headline .animated-words b {
+    display: inline-block;
+    position: absolute;
+    white-space: nowrap;
+    left: 0;
+    top: 0;
+}
+
+.headline .animated-words b.is-visible {
+    position: relative;
+}
+
+.headline.loading-bar span {
+    display: inline-block;
+    padding: .2em 0;
+}
+
+.headline.loading-bar .animated-words {
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.headline.loading-bar .animated-words::after {
+    -webkit-transition: width 0.3s -0.1s;
+    -moz-transition: width 0.3s -0.1s;
+    transition: width 0.3s -0.1s;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    z-index: 2;
+}
+
+.headline.loading-bar .animated-words.is-loading::after {
+    width: 100%;
+    -webkit-transition: width 3s;
+    -moz-transition: width 3s;
+    transition: width 3s;
+}
+
+.headline.loading-bar .animated-words b {
+    opacity: 0;
+}
+
+.headline.loading-bar .animated-words b.is-visible {
+    opacity: 1;
+}
+
+.headline.loading-bar b {
+    top: .2em;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.headline.loading-bar b.is-visible {
+    opacity: 1;
+    top: 0;
+}
+
+/*************************************************************************************************************
+4. HOMEPAGE BUTTONS
+*************************************************************************************************************/
+
+.btn-home {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    border: .1em solid;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0.6;
+    color: #FFF;
+    margin-right: 10px;
+    border-radius: 9px;
+}
+
+.btn-home i {
+    font-size: 20px;
+    margin-left: 20px;
+    line-height: 25px;
+}
+
+.btn-home:hover {
+    opacity: 1;
+}
+
+.btn-home:hover .button__text {
+    -webkit-animation: fx-text .5s ease-out;
+    animation: fx-text .5s ease-out;
+}
+
+.btn-home:hover .button__text--bis {
+    -webkit-animation: fx-text-bis .5s ease-out;
+    animation: fx-text-bis .5s ease-out;
+}
+
+.btn-home:hover .button__mask {
+    -webkit-animation: fx-mask .5s ease-out;
+    animation: fx-mask .5s ease-out;
+}
+
+.btn-home:active {
+    opacity: 1;
+    background: white;
+    color: inherit;
+}
+
+.button__text {
+    display: block;
+    padding: .3em 1.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button__text:before {
+    content: attr(title);
+}
+
+.button__text--bis {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateX(-1em);
+    transform: translateX(-1em);
+    opacity: 0;
+}
+
+.button__mask {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    -webkit-transform: translateX(-100%) rotate(45deg);
+    transform: translateX(-100%) rotate(45deg);
+    transition: all 0.3s;
+}
+
+/************************************************
+4.1. Homepage Buttons Animations
+*/
+
+@-webkit-keyframes fx-mask {
+    0% {
+        -webkit-transform: translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%) rotate(45deg);
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+@keyframes fx-mask {
+    0% {
+        -webkit-transform: translateX(-100%) rotate(45deg);
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%) rotate(45deg);
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+@-webkit-keyframes fx-text {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(1em);
+        transform: translateX(1em);
+        opacity: 0;
+    }
+}
+
+@keyframes fx-text {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(1em);
+        transform: translateX(1em);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fx-text-bis {
+    0% {
+        -webkit-transform: translateX(-1em);
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fx-text-bis {
+    0% {
+        -webkit-transform: translateX(-1em);
+        transform: translateX(-1em);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/************************************************
+4.2. Homepage Scroll Animation
+*/
+
+#scrolling {
+    display: none;
+}
+
+#scrolling {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    bottom: 20px;
+    -webkit-transform: translateX(-50%);
+    z-index: 9999;
+}
+
+#scrolling span {
+    display: block;
+    width: 5px;
+    height: 5px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin: 0 0 3px 5px;
+}
+
+#scrolling .mouse {
+    height: 21px;
+    width: 14px;
+    border-radius: 10px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    border: 2px solid #ffffff;
+    top: 170px;
+}
+
+#scrolling .down-arrow-1 {
+    margin-top: 6px;
+}
+
+#scrolling .down-arrow-1,
+#scrolling .down-arrow-2,
+#scrolling .down-arrow-3 {
+    -webkit-animation: scrolling 1s infinite;
+    -moz-animation: scrolling 1s infinite;
+}
+
+#mouse-croll .down-arrow-1 {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
+}
+
+#scrolling .down-arrow-2 {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+}
+
+#scrolling .down-arrow-3 {
+    -webkit-animation-delay: .3s;
+    -moz-animation-dekay: .3s;
+    -webkit-animation-direction: alternate;
+}
+
+#scrolling .mouse-in {
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: #ffffff;
+    position: relative;
+}
+
+#scrolling .mouse-in {
+    -webkit-animation: animated-mouse 1.2s ease infinite;
+    -moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+@-webkit-keyframes animated-mouse {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(6px);
+        -ms-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+}
+
+@-webkit-keyframes scrolling {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scrolling {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*************************************************************************************************************
+5. ABOUT SECTION
+*************************************************************************************************************/
+
+.about-gox {
+    cursor: crosshair;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.about-gox .text-center {
+    padding: 15px 15px;
+    position: relative;
+}
+
+.about-gox .text-center:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.about-gox img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(100%);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.about-gox p {
+    font-size: 14px;
+    margin-top: 14px;
+}
+
+.about-gox h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 84px;
+    color: #4725b2;
+}
+
+/************************************************
+5.1. Portfolio
+*/
+
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+}
+
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    margin: 0;
+}
+
+/************************************************
+5.2. Portfolio Effect
+*/
+
+figure.portfolio-effect {
+    background: #4725b2;
+    background: -moz-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: -webkit-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: linear-gradient(to bottom, #4725b2 1%, #29224a 100%);
+    cursor: zoom-in;
+}
+
+figure.portfolio-effect img {
+    opacity: 0.95;
+    -webkit-transition: opacity 0.75s, -webkit-transform 0.75s;
+    transition: opacity 0.75s, transform 0.75s;
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1);
+    width: 100%;
+}
+
+figure.portfolio-effect figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4725b2;
+    background: -moz-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: -webkit-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: linear-gradient(to bottom, #4725b2 1%, #29224a 100%);
+    opacity: .2;
+    content: '';
+    -webkit-transition: -webkit-transform 1s;
+    transition: transform 1s;
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -100%, 0);
+}
+
+figure.portfolio-effect:hover img {
+    opacity: 0.9;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+figure.portfolio-effect:hover figcaption::before {
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 100%, 0);
+}
+
+figure.portfolio-effect:hover p {
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+/************************************************
+5.3. Portfolio Responsive
+*/
+
+@media screen and (max-width: 10em) {
+    .content {
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .grid figure {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+}
+
+/************************************************
+5.4. Lightbox
+*/
+
+.lb-data .lb-number {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.lb-outerContainer {
+    border-radius: 30px;
+}
+
+.lightbox .lb-image {
+    border-radius: 30px;
+}
+
+.slick-dots {
+    bottom: 0;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots li button:before {
+    font-size: 30px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #4725b2;
+}
+
+/*************************************************************************************************************
+6. CONTACT SECTION
+*************************************************************************************************************/
+
+.contact {
+    clear: both;
+    position: relative;
+}
+
+.contact .contact-info {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+/************************************************
+6.1. Contact Section - Textarea & Input & Label Styles
+*/
+
+.contact-form .form-group textarea,
+.contact-form .form-group input {
+    border: 1px solid #a6b0bd;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: 10px;
+    position: relative;
+    padding-left: 65px;
+}
+
+.contact-form .form-group input {
+    height: 50px;
+}
+
+.contact-form .form-group textarea {
+    height: 200px;
+    padding-top: 15px;
+}
+
+.contact-form .form-group label {
+    position: absolute;
+    z-index: 999;
+    left: 40px;
+    top: 22px;
+    font-size: 16px;
+    color: #a6b0bd;
+    border-right: 1px solid #c6cdd5;
+    padding-right: 10px;
+    width: 30px;
+}
+
+.contact-form .form-group textarea::placeholder,
+.contact-form .form-group input::placeholder {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/************************************************
+6.2. Contact-Section - Send Button Style
+*/
+
+.contact-form .btn-send {
+    width: 100%;
+    margin: 15px 15px 0 15px;
+    color: #ffffff;
+    font-weight: 700;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #4725b2;
+    border: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.contact-form .btn-send i {
+    margin-left: 20px;
+}
+
+/************************************************
+6.3. Contact-Section - Error & Valid Styles
+*/
+
+.contact-form .form-group textarea.error,
+.contact-form .form-group input.error {
+    border: 1px solid #f69999;
+}
+
+.contact-form .form-group textarea.valid,
+.contact-form .form-group input.valid {
+    border: 1px solid #85c088;
+}
+
+.contact-form .form-group label.error {
+    color: #f69999;
+    width: 100%;
+    position: relative;
+    font-size: 12px;
+    border-right: none;
+    top: 0;
+    left: 25px;
+}
+
+.contact-form .successForm,
+.contact-form .errorForm {
+    display: none;
+}
+
+.contact-form .successForm p,
+.contact-form .errorForm p {
+    position: absolute;
+    display: block;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    color: #ffffff;
+    border-radius: 2px;
+    padding: .75em;
+}
+
+.contact-form .successForm p {
+    background: rgba(39, 174, 96, 0.7);
+}
+
+.contact-form .errorForm p {
+    background: rgba(231, 76, 60, 0.7);
+}
+
+/*************************************************************************************************************
+7. COUNTDOWN
+*************************************************************************************************************/
+
+.countdown {
+    position: absolute;
+    display: block;
+    width: 800px;
+    font-family: 'Kameron', serif;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: -330px;
+    margin: auto;
+}
+
+.countdown li {
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+}
+
+.countdown li span {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 50px;
+    width: 70px;
+}
+
+.countdown li p {
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 90px;
+    top: 27px;
+}
+
+/*************************************************************************************************************
+8. YOUTUBE PLAYER BUTTONS (Only works with youtube background version)
+*************************************************************************************************************/
+
+.screen,
+.pause,
+.mute {
+    position: absolute !important;
+    color: #ffffff;
+    font-size: 16px;
+    bottom: 30px;
+    opacity: .4;
+}
+
+.pause {
+    left: 20px;
+    border-right: 1px solid rgba(196, 196, 196, 0.2);
+    padding-right: 10px;
+}
+
+.mute {
+    border-right: 1px solid rgba(196, 196, 196, 0.2);
+    padding-left: 12px;
+    padding-right: 10px;
+    left: 45px;
+}
+
+.screen {
+    left: 96px;
+}
+
+.screen:hover,
+.pause:hover,
+.mute:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.mute::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f028";
+}
+
+.muted::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f026";
+}
+
+.pause::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f28b";
+}
+
+.play:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f144";
+}
+
+.screen:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0b2";
+}
+
+/*************************************************************************************************************
+9. MAP
+*************************************************************************************************************/
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #efefef;
+    border-radius: 0;
+    font-size: 18px;
+}
+
+/*************************************************************************************************************
+10. SUBSCIPTION
+*************************************************************************************************************/
+
+.subscribe-form {
+    margin-top: 24px;
+}
+
+/************************************************
+10.1. Subscribe Button
+*/
+
+#mc-subscribe {
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    background: #4725b2;
+    border: none;
+    padding: 9px 15px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#mc-subscribe:hover {
+    background: #3a1d97;
+}
+
+#mc-notification span {
+    font-size: 12px;
+    padding-left: 40px;
+}
+
+#mc-notification span.alert {
+    border-radius: 20px;
+    margin-top: 10px;
+    display: block;
+}
+
+#mc-notification span.alert i {
+    position: absolute;
+    left: 8px;
+    font-size: 16px;
+}
+
+/************************************************
+10.2. Modal
+*/
+
+.modal-open #left,
+.modal-open #right,
+.modal-open #center {
+    -webkit-filter: blur(5px);
+    cursor: pointer;
+}
+
+.modal-content {
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: 30px;
+    color: #ffffff;
+    text-align: justify;
+    border: 3px solid #4725b2;
+}
+
+.modal-body {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 27px;
+}
+
+.modal-body .form-control {
+    height: 50px;
+    background: transparent;
+    border: 2px solid #4725b2;
+    border-radius: 25px;
+    color: #ffffff;
+}
+
+.modal-body .form-group {
+    position: relative;
+    margin: 0;
+}
+
+.modal-body h3 {
+    margin-bottom: 24px;
+    padding: 0;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.modal-body span {
+    font-size: 14px;
+}
+
+.modal-body label {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: #737373;
+}
+
+/************************************************
+10.3. Modal Close Animation
+*/
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4725b2;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #1a1a1a;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position: absolute;
+    top: -70px;
+    right: -20px;
+    z-index: 999;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 29;
+    stroke-dashoffset: 29;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #1a1a1a;
+    }
+}
+
+
+/*************************************************************************************************************
+11. LOADING ANIMATION
+*************************************************************************************************************/
+
+.loading-page {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    background: #29224a;
+    stroke: #d33b6a;
+    position: fixed;
+    overflow: hidden;
+    z-index: 99999999999;
+}
+
+.loading-page svg {
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #3f226e;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loading-page #wave {
+    stroke-dasharray: 0 16 101 16;
+    -webkit-animation: moveTheWave 2400ms linear infinite;
+    animation: moveTheWave 2400ms linear infinite;
+}
+
+@-webkit-keyframes moveTheWave {
+    0% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        stroke-dashoffset: -133;
+        -webkit-transform: translate3d(-90px, 0, 0);
+        transform: translate3d(-90px, 0, 0);
+    }
+}
+
+@keyframes moveTheWave {
+    0% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        stroke-dashoffset: -133;
+        -webkit-transform: translate3d(-90px, 0, 0);
+        transform: translate3d(-90px, 0, 0);
+    }
+}
+
+/*************************************************************************************************************
+12. BACK TO TOP BUTTON
+*************************************************************************************************************/
+
+#backtoTop {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#backtoTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backtoTop.btn-animation {
+    width: 40px;
+    height: 40px;
+    line-height: 40px !important;
+    font-size: 30px;
+}
+
+
+/*************************************************************************************************************
+13. SOCIAL MEDIA BUTTONS
+*************************************************************************************************************/
+
+section#social {
+    padding-top: 0;
+}
+
+h3.social-head {
+    margin-left: 0 !important;
+    padding: 0;
+    text-align: center;
+}
+
+.social-btns {
+    height: auto;
+    margin: auto;
+    font-size: 0;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn-animation {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 28%;
+    box-shadow: -1px 5px 15px -4px rgba(0, 0, 0, 0.1);
+    opacity: 0.99;
+    background: #fafafa;
+}
+
+.btn-animation:before {
+    content: '';
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-animation .fab {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.btn-animation,
+.btn-animation:before,
+.btn-animation .fab,
+.btn-animation .fas {
+    transition: all 0.35s;
+    transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.btn-animation:before {
+    top: 90%;
+    left: -110%;
+}
+
+.btn-animation .fas,
+.btn-animation .fab {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.btn-animation.chevron:before {
+    background-color: #4725b2;
+}
+
+.btn-animation.chevron .fas {
+    color: #4725b2;
+}
+
+.btn-animation.facebook:before {
+    background-color: #3b5998;
+}
+
+.btn-animation.facebook .fab {
+    color: #3b5998;
+}
+
+.btn-animation.twitter:before {
+    background-color: #3cf;
+}
+
+.btn-animation.twitter .fab {
+    color: #3cf;
+}
+
+.btn-animation.google:before {
+    background-color: #dc4a38;
+}
+
+.btn-animation.google .fab {
+    color: #dc4a38;
+}
+
+.btn-animation.dribbble:before {
+    background-color: #f26798;
+}
+
+.btn-animation.dribbble .fab {
+    color: #f26798;
+}
+
+.btn-animation.skype:before {
+    background-color: #00aff0;
+}
+
+.btn-animation.skype .fab {
+    color: #00aff0;
+}
+
+.btn-animation:focus:before,
+.btn-animation:hover:before {
+    top: -10%;
+    left: -10%;
+}
+
+.btn-animation:focus i::before {
+    color: #ffffff;
+}
+
+.btn-animation:focus .fa,
+.btn-animation:focus .fas,
+.btn-animation:hover .fab,
+.btn-animation:hover .fas,
+.btn-animation:active .fab,
+.btn-animation:active .fas {
+    color: #fff;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    border: none
+}
+
+/*************************************************************************************************************
+14. LAYOUT TYPES
+*************************************************************************************************************/
+
+#kenburns {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+}
+
+#canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#youtube-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+}
+
+.particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#wrapper_bgndVideo {
+    z-index: -2 !important;
+}
+
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    mix-blend-mode: multiply;
+}
+
+.vimeo-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.vimeo-wrapper iframe {
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.color-background {
+    background: #6154A8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+#wavybg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/*************************************************************************************************************
+15. OVERLAY TYPES
+*************************************************************************************************************/
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: .9;
+}
+
+/************************************************
+15.1. Dotted
+*/
+
+body[data-overlay-type="dotted"] .overlay {
+    background: rgba(44, 38, 66, 0.8) url("../img/overlay.png") repeat;
+}
+
+/************************************************
+15.2. Gradient
+*/
+
+body[data-overlay-type="gradient"] .overlay {
+    background: #152942;
+    background: -moz-linear-gradient(-45deg, #152942 41%, #dfa553 100%);
+    background: -webkit-linear-gradient(-45deg, #152942 41%, #dfa553 100%);
+    background: linear-gradient(135deg, #152942 41%, #dfa553 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#152942', endColorstr='#dfa553', GradientType=1);
+    opacity: .9;
+}
+
+/*************************************************************************************************************
+16. COLOR TYPES
+*************************************************************************************************************/
+/************************************************
+16.1. Purple
+*/
+body[data-theme-color="purple"] #center,
+body[data-theme-color="purple"] figure.portfolio-effect,
+body[data-theme-color="purple"] figure.portfolio-effect figcaption::before {
+    background: #4725b2;
+    background: -moz-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: -webkit-linear-gradient(top, #4725b2 1%, #29224a 100%);
+    background: linear-gradient(to bottom, #4725b2 1%, #29224a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4725b2', endColorstr='#29224a', GradientType=0);
+}
+
+body[data-theme-color="purple"] .about-gox h4,
+body[data-theme-color="purple"] .slick-dots li.slick-active button:before,
+body[data-theme-color="purple"] .btn-animation.chevron .fas {
+    color: #4725b2;
+}
+
+body[data-theme-color="purple"] .contact-form .btn-send,
+body[data-theme-color="purple"] #mc-subscribe,
+body[data-theme-color="purple"] #mc-subscribe:hover,
+body[data-theme-color="purple"] .btn-animation.chevron:before {
+    background: #4725b2;
+}
+
+body[data-theme-color="purple"] .modal-content,
+body[data-theme-color="purple"] .modal-body .form-control {
+    border-color: #4725b2;
+}
+
+body[data-theme-color="purple"] .checkmark__circle {
+    stroke: #4725b2;
+}
+
+/************************************************
+16.2. Red
+*/
+
+body[data-theme-color="red"] #center,
+body[data-theme-color="red"] figure.portfolio-effect,
+body[data-theme-color="red"] figure.portfolio-effect figcaption::before {
+    background: #fb3d3d;
+    background: -moz-linear-gradient(top, #fb3d3d 1%, #bc1818 100%);
+    background: -webkit-linear-gradient(top, #fb3d3d 1%, #bc1818 100%);
+    background: linear-gradient(to bottom, #fb3d3d 1%, #bc1818 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb3d3d', endColorstr='#bc1818', GradientType=0);
+}
+
+body[data-theme-color="red"] .about-gox h4,
+body[data-theme-color="red"] .slick-dots li.slick-active button:before,
+body[data-theme-color="red"] .btn-animation.chevron .fas {
+    color: #fb3d3d;
+}
+
+body[data-theme-color="red"] .contact-form .btn-send,
+body[data-theme-color="red"] #mc-subscribe,
+body[data-theme-color="red"] #mc-subscribe:hover,
+body[data-theme-color="red"] .btn-animation.chevron:before {
+    background: #fb3d3d;
+}
+
+body[data-theme-color="red"] .modal-content,
+body[data-theme-color="red"] .modal-body .form-control {
+    border-color: #fb3d3d;
+}
+
+body[data-theme-color="red"] .checkmark__circle {
+    stroke: #fb3d3d;
+}
+
+/************************************************
+16.3. Green
+*/
+
+body[data-theme-color="green"] #center,
+body[data-theme-color="green"] figure.portfolio-effect,
+body[data-theme-color="green"] figure.portfolio-effect figcaption::before {
+    background: #0c9355;
+    background: -moz-linear-gradient(top, #0c9355 1%, #23513c 100%);
+    background: -webkit-linear-gradient(top, #0c9355 1%, #23513c 100%);
+    background: linear-gradient(to bottom, #0c9355 1%, #23513c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0c9355', endColorstr='#23513c', GradientType=0);
+}
+
+body[data-theme-color="green"] .about-gox h4,
+body[data-theme-color="green"] .slick-dots li.slick-active button:before,
+body[data-theme-color="green"] btn-animation.chevron .fas {
+    color: #0c9355;
+}
+
+body[data-theme-color="green"] .contact-form .btn-send,
+body[data-theme-color="green"] #mc-subscribe,
+body[data-theme-color="green"] #mc-subscribe:hover,
+body[data-theme-color="green"].btn-animation.chevron:before {
+    background: #0c9355;
+}
+
+body[data-theme-color="green"] .modal-content,
+body[data-theme-color="green"] .modal-body .form-control {
+    border-color: #0c9355;
+}
+
+body[data-theme-color="green"] .checkmark__circle {
+    stroke: #0c9355;
+}
+
+/************************************************
+16.4. Blue
+*/
+
+body[data-theme-color="blue"] #center,
+body[data-theme-color="blue"] figure.portfolio-effect,
+body[data-theme-color="blue"] figure.portfolio-effect figcaption::before {
+    background: #0ed4de;
+    background: -moz-linear-gradient(top, #0ed4de 1%, #1f4994 100%);
+    background: -webkit-linear-gradient(top, #0ed4de 1%, #1f4994 100%);
+    background: linear-gradient(to bottom, #0ed4de 1%, #1f4994 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0ed4de', endColorstr='#1f4994', GradientType=0);
+}
+
+body[data-theme-color="blue"] .about-gox h4,
+body[data-theme-color="blue"] .slick-dots li.slick-active button:before,
+body[data-theme-color="blue"] .btn-animation.chevron .fas {
+    color: #0ed4de;
+}
+
+body[data-theme-color="blue"] .contact-form .btn-send,
+body[data-theme-color="blue"] #mc-subscribe,
+body[data-theme-color="blue"] #mc-subscribe:hover,
+body[data-theme-color="blue"] .btn-animation.chevron:before {
+    background: #0ed4de;
+}
+
+body[data-theme-color="blue"] .modal-content,
+body[data-theme-color="blue"] .modal-body .form-control {
+    border-color: #0ed4de;
+}
+
+body[data-theme-color="blue"] .checkmark__circle {
+    stroke: #0ed4de;
+}
+
+/************************************************
+16.5. Magentamix
+*/
+
+body[data-theme-color="magentamix"] #center,
+body[data-theme-color="magentamix"] figure.portfolio-effect,
+body[data-theme-color="magentamix"] figure.portfolio-effect figcaption::before {
+    background: #fb3d3d;
+    background: -moz-linear-gradient(top, #fb3d3d 1%, #4618bc 100%);
+    background: -webkit-linear-gradient(top, #fb3d3d 1%, #4618bc 100%);
+    background: linear-gradient(to bottom, #fb3d3d 1%, #4618bc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb3d3d', endColorstr='#4618bc', GradientType=0);
+}
+
+body[data-theme-color="magentamix"] .about-gox h4,
+body[data-theme-color="magentamix"] .slick-dots li.slick-active button:before,
+body[data-theme-color="magentamix"] .btn-animation.chevron .fas {
+    color: #4618bc;
+}
+
+
+body[data-theme-color="magentamix"] #mc-subscribe,
+body[data-theme-color="magentamix"] #mc-subscribe:hover,
+body[data-theme-color="magentamix"] .btn-animation.chevron:before {
+    background: #4618bc;
+}
+
+body[data-theme-color="magentamix"] .contact-form .btn-send,
+body[data-theme-color="magentamix"] .modal-content,
+body[data-theme-color="magentamix"] .modal-body .form-control {
+    border-color: #4618bc;
+}
+
+body[data-theme-color="magentamix"] .checkmark__circle {
+    stroke: #4618bc;
+}
+
+/************************************************
+16.6. Orange
+*/
+
+body[data-theme-color="orange"] #center,
+body[data-theme-color="orange"] figure.portfolio-effect,
+body[data-theme-color="orange"] figure.portfolio-effect figcaption::before {
+    background: #f6a31c;
+    background: -moz-linear-gradient(top, #f6a31c 1%, #ee7b18 100%);
+    background: -webkit-linear-gradient(top, #f6a31c 1%, #ee7b18 100%);
+    background: linear-gradient(to bottom, #f6a31c 1%, #ee7b18 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6a31c', endColorstr='#ee7b18', GradientType=0);
+}
+
+body[data-theme-color="orange"] .about-gox h4,
+body[data-theme-color="orange"] .slick-dots li.slick-active button:before,
+body[data-theme-color="orange"] .btn-animation.chevron .fas {
+    color: #f6a31c;
+}
+
+body[data-theme-color="orange"] .contact-form .btn-send,
+body[data-theme-color="orange"] #mc-subscribe,
+body[data-theme-color="orange"] #mc-subscribe:hover,
+body[data-theme-color="orange"] .btn-animation.chevron:before {
+    background: #f6a31c;
+}
+
+body[data-theme-color="orange"] .modal-content,
+body[data-theme-color="orange"] .modal-body .form-control {
+    border-color: #f6a31c;
+}
+
+body[data-theme-color="orange"] .checkmark__circle {
+    stroke: #f6a31c;
+}
+
+/************************************************
+16.7. Dark
+*/
+
+body[data-theme-color="dark"] #center,
+body[data-theme-color="dark"] figure.portfolio-effect,
+body[data-theme-color="dark"] figure.portfolio-effect figcaption::before {
+    background: #2e2e2e;
+    background: -moz-linear-gradient(top, #2e2e2e 1%, #090909 100%);
+    background: -webkit-linear-gradient(top, #2e2e2e 1%, #090909 100%);
+    background: linear-gradient(to bottom, #2e2e2e 1%, #090909 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e2e2e', endColorstr='#090909', GradientType=0);
+}
+
+body[data-theme-color="dark"] .about-gox h4,
+body[data-theme-color="dark"] .slick-dots li.slick-active button:before,
+body[data-theme-color="dark"] .btn-animation.chevron .fas {
+    color: #2e2e2e;
+}
+
+body[data-theme-color="dark"] .contact-form .btn-send,
+body[data-theme-color="dark"] #mc-subscribe,
+body[data-theme-color="dark"] #mc-subscribe:hover,
+body[data-theme-color="dark"] .btn-animation.chevron:before {
+    background: #2e2e2e;
+}
+
+body[data-theme-color="dark"] .modal-content,
+body[data-theme-color="dark"] .modal-body .form-control {
+    border-color: #2e2e2e;
+}
+
+body[data-theme-color="dark"] .checkmark__circle {
+    stroke: #2e2e2e;
+}
+
+/************************************************
+16.8. White
+*/
+
+body[data-theme-color="white"][data-overlay-type="dotted"] .overlay {
+    background: rgba(255, 255, 255, 0.7) url("../img/overlay-white.png") repeat;
+}
+
+body[data-theme-color="white"][data-overlay-type="gradient"] .overlay {
+    background: -moz-linear-gradient(left, rgba(196, 196, 196, 0.8) 0%, rgba(196, 196, 196, 0.8) 1%, rgba(255, 255, 255, 0.8) 100%);
+    background: -webkit-linear-gradient(left, rgba(196, 196, 196, 0.8) 0%, rgba(196, 196, 196, 0.8) 1%, rgba(255, 255, 255, 0.8) 100%);
+    background: linear-gradient(to right, rgba(196, 196, 196, 0.8) 0%, rgba(196, 196, 196, 0.8) 1%, rgba(255, 255, 255, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc4c4c4', endColorstr='#ccffffff', GradientType=1);
+}
+
+body[data-theme-color="white"] figure.portfolio-effect,
+body[data-theme-color="white"] figure.portfolio-effect figcaption::before {
+    background: #ededed;
+    background: -moz-linear-gradient(top, #ededed 1%, #c9c9c9 100%);
+    background: -webkit-linear-gradient(top, #ededed 1%, #c9c9c9 100%);
+    background: linear-gradient(to bottom, #ededed 1%, #c9c9c9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#c9c9c9', GradientType=0);
+}
+
+body[data-theme-color="white"] a.logo::before {
+    content: url("../img/logo-black.png")
+}
+
+body[data-theme-color="white"] .headline,
+body[data-theme-color="white"] .about-gox h4 {
+    color: #000000;
+}
+
+body[data-theme-color="white"] .slick-dots li.slick-active button:before {
+    color: #ededed;
+}
+
+body[data-theme-color="white"] .contact-form .btn-send,
+body[data-theme-color="white"] #mc-subscribe,
+body[data-theme-color="white"] #mc-subscribe:hover,
+body[data-theme-color="white"] .btn-animation.chevron:before {
+    background: #ededed;
+}
+
+body[data-theme-color="white"] .modal-content,
+body[data-theme-color="white"] .modal-body .form-control {
+    border-color: #ededed;
+}
+
+body[data-theme-color="white"] .checkmark__circle {
+    stroke: #ededed;
+}
+
+body[data-theme-color="white"] #left .display-2 {
+    color: #000000;
+}
+
+body[data-theme-color="white"] #center {
+    background: #ffffff;
+    box-shadow: none;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+}
+
+body[data-theme-color="white"] #scrolling span,
+body[data-theme-color="white"] #scrolling .mouse {
+    border-color: #000000;
+}
+
+body[data-theme-color="white"] .headline.loading-bar .animated-words::after,
+body[data-theme-color="white"] #scrolling .mouse-in {
+    background: #000000;
+}
+
+body[data-theme-color="white"] .pause,
+body[data-theme-color="white"] .mute {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+body[data-theme-color="white"] .screen,
+body[data-theme-color="white"] .pause,
+body[data-theme-color="white"] .mute,
+body[data-theme-color="white"] .btn-animation.chevron .fas,
+body[data-theme-color="white"] .contact-form .btn-send,
+body[data-theme-color="white"] #mc-subscribe,
+body[data-theme-color="white"] .countdown {
+    color: #000000;
+}
+
+body[data-theme-color="white"] .contact-form .btn-send {
+    border: 1px solid #b1b1b1;
+}
+
+body[data-theme-color="white"] .btn-home {
+    opacity: 1;
+    background: white;
+    color: inherit;
+}
+
+body[data-theme-color="white"] .countdown li span {
+    line-height: 66px;
+}
+
+@media screen and (max-width: 527px) {
+    body[data-theme-color="white"] .countdown li span {
+        line-height: 46px;
+    }
+}
+
+/*************************************************************************************************************
+17.  MEDIA QUERIES (RESPONSIVE)
+17.1. Max - Width 1024px
+/*************************************************************************************************************/
+
+@media screen and (max-width: 1024px) {
+
+    html,
+    body {
+        overflow: unset;
+    }
+
+    #left {
+        position: relative;
+        width: calc(100% - 70px);
+        height: 100%;
+    }
+
+    #right {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        left: 0;
+        height: auto;
+    }
+
+    #center {
+        position: fixed;
+        width: 70px;
+        right: 0;
+        top: 0;
+    }
+
+    #scrolling {
+        display: inline;
+    }
+}
+
+/************************************************
+17.2. Max - Width 527px
+*/
+
+@media screen and (max-width: 527px) {
+
+    #center {
+        width: 50px;
+    }
+
+    #right section {
+        padding: 40px 15px;
+    }
+
+    #right section#social {
+        padding-top: 0;
+    }
+
+    #right section h1 {
+        font-size: 26px;
+    }
+
+    .countdown li span {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .countdown li p {
+        top: 16px;
+    }
+
+    .modal-body {
+        padding: 40px 15px;
+    }
+
+    .btn-animation {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 10px;
+    }
+
+    .btn-animation .fab {
+        font-size: 20px;
+    }
+
+    .btn-home {
+        width: 180px;
+    }
+
+    #canvas {
+        display: none;
+        visibility: hidden;
+    }
+
+}
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    #right h3,
+    .modal-close {
+        display: none;
+    } 
+}
